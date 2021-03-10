@@ -1,12 +1,12 @@
-class Rubber{
+class Sand{
     constructor(x,y,radius){
         var options={
             restitution:0.8,
             friction:1,
             density:1
         }
-        this.body=Bodies.circle(400,200,40,options);
-        this.radius=40;
+        this.body=Bodies.circle(x,y,10,options);
+        this.radius=10;
         World.add(world,this.body);
     }
     display(){
@@ -15,12 +15,13 @@ class Rubber{
         push();
         translate(pos.x,pos.y);
         rotate(angle);
-        
-        ellipseMode(RADIUS);
         strokeWeight(4);
         stroke("black");
-        fill("blue");
-        ellipse(0,0,40);
+        fill("red");
+        ellipseMode(RADIUS);
+        ellipse(0,0,10);
         pop();
+    
     }
-}
+    
+    }
